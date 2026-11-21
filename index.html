@@ -3,58 +3,328 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dozen: help and support</title>
-  <meta name="description" content="Help for Dozen, the weekly dinner planner that prices your grocery list by the pack.">
+  <title>Dozen: weekly dinners for your grocery budget</title>
+  <meta name="description" content="Dozen plans a week of dinners for your household and budget, then builds a grocery list priced by the pack at your store. For iPhone.">
+  <meta property="og:title" content="Dozen: weekly dinners for your grocery budget">
+  <meta property="og:description" content="A week of dinners and one grocery list priced by the pack, so dinners share what you buy and less goes to waste.">
+  <meta property="og:image" content="https://moodoraapp.github.io/dozen/img/icon-512.png">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#fbf8f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/icon-180.png">
 </head>
-<body>
-  <header>
-    <span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-    <a class="name" href="./">Dozen</a>
-  </header>
-  <main>
-    <h1>Help and support</h1>
-    <p class="muted">Dozen plans a week of dinners for your household and budget, then builds a grocery list priced by the pack. Dinners share the packs you buy, so less goes to waste.</p>
+<body class="home">
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 11.8125 8.4375"><path stroke-width="1.6" d="M0.65625 4.40625L4.03125 7.78125L11.1562 0.65625"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6.5 13.5L12 19l5.5-5.5"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 13.125 14.7917"><path stroke-width="1.46" d="M2.39585 3.64583H12.3959L9.47919 0.729167M10.7292 11.1458H0.729188L3.64585 14.0625"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 9.79167 15.625"><path stroke-width="1.46" d="M2.39583 0.729167H7.39583L6.5625 5.3125L9.0625 7.8125V9.0625H0.729167V7.8125L3.22917 5.3125L2.39583 0.729167Z"/><path stroke-width="1.46" d="M4.89583 9.0625V14.8958"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 17.1875 17.6458"><path stroke-width="1.6" d="M3.09375 2.63542H14.0938C15.3594 2.63542 16.3854 3.66143 16.3854 4.92708V14.5521C16.3854 15.8177 15.3594 16.8438 14.0938 16.8438H3.09375C1.8281 16.8438 0.802083 15.8177 0.802083 14.5521V4.92708C0.802083 3.66143 1.8281 2.63542 3.09375 2.63542Z"/><path stroke-width="1.6" d="M0.802083 6.76042H16.3854M4.92708 0.802083V4.46875M12.2604 0.802083V4.46875"/></symbol>
+    <symbol id="i-pantry" viewBox="0 0 14.4375 17.6458"><path stroke-width="1.6" d="M3.09375 0.802083H11.3438V3.55208H3.09375V0.802083Z"/><path stroke-width="1.6" d="M2.17708 3.55208H12.2604C12.6251 3.55208 12.9748 3.69695 13.2327 3.95481C13.4906 4.21267 13.6354 4.56241 13.6354 4.92708V15.0104C13.6354 15.4966 13.4423 15.963 13.0984 16.3068C12.7546 16.6506 12.2883 16.8438 11.8021 16.8438H2.63542C2.14919 16.8438 1.68287 16.6506 1.33905 16.3068C0.995238 15.963 0.802083 15.4966 0.802083 15.0104V4.92708C0.802083 4.56241 0.946949 4.21267 1.20481 3.95481C1.46267 3.69695 1.81241 3.55208 2.17708 3.55208Z"/><path stroke-width="1.6" d="M0.802083 8.13542H13.6354"/></symbol>
+    <symbol id="i-list" viewBox="0 0 16.7292 13.9792"><path stroke-width="1.6" d="M6.76042 1.71875H15.9271M6.76042 6.76042H15.9271M6.76042 11.8021H15.9271"/><path stroke-width="1.6" d="M0.802083 1.71875L2.17708 3.09375L4.46875 0.802083M0.802083 6.76042L2.17708 8.13542L4.46875 5.84375M0.802083 11.8021L2.17708 13.1771L4.46875 10.8854"/></symbol>
+    <symbol id="i-users" viewBox="0 0 18.7504 14.7502"><path stroke-width="1.75" d="M9.37517 3.875C9.37517 5.53185 8.03202 6.875 6.37517 6.875C4.71831 6.875 3.37517 5.53185 3.37517 3.875C3.37517 2.21815 4.71831 0.875 6.37517 0.875C8.03202 0.875 9.37517 2.21815 9.37517 3.875Z"/><path stroke-width="1.75" d="M0.875169 13.875C1.47517 10.875 3.67517 9.075 6.37517 9.075C9.07517 9.075 11.2752 10.875 11.8752 13.875"/><path stroke-width="1.75" d="M12.8752 1.075C13.4411 1.2927 13.9278 1.67678 14.2711 2.17663C14.6144 2.67648 14.7981 3.26862 14.7981 3.875C14.7981 4.48138 14.6144 5.07352 14.2711 5.57337C13.9278 6.07322 13.4411 6.4573 12.8752 6.675M14.3752 9.475C16.1752 10.075 17.3752 11.675 17.8752 13.875"/></symbol>
+    <symbol id="i-egg" viewBox="0 0 20 20"><path stroke-width="1.46" d="M10 2.91667C13 2.91667 15.4167 7.25 15.4167 10.8333C15.4167 12.2699 14.846 13.6477 13.8302 14.6635C12.8143 15.6793 11.4366 16.25 10 16.25C8.56341 16.25 7.18566 15.6793 6.16984 14.6635C5.15402 13.6477 4.58333 12.2699 4.58333 10.8333C4.58333 7.25 7 2.91667 10 2.91667Z"/><circle cx="10" cy="11.25" r="2.5" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24"><circle stroke-width="1.8" cx="12" cy="13.5" r="7.5"/><path stroke-width="1.8" d="M12 10v3.5l2.5 1.5M9.5 3h5M12 3v3"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path stroke-width="1.8" d="M6.5 16.5V11a5.5 5.5 0 0 1 11 0v5.5l1.5 2h-14z"/><path stroke-width="1.8" d="M10 21a2.2 2.2 0 0 0 4 0"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path stroke-width="1.8" d="M5 19.5C5 11 10 5.5 19.5 4.5 18.5 14 13 19 5 19.5Z"/><path stroke-width="1.8" d="M5 19.5c2.5-3.5 5.5-6.5 9.5-9"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path stroke-width="1.8" d="M10.5 13.5a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1.2 1.2"/><path stroke-width="1.8" d="M13.5 10.5a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1.2-1.2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect stroke-width="1.8" x="5" y="10.5" width="14" height="10" rx="2.5"/><path stroke-width="1.8" d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect stroke-width="1.8" x="6.5" y="2.5" width="11" height="19" rx="2.8"/><path stroke-width="1.8" d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path stroke-width="1.8" d="M12 3l7 2.8v5.4c0 4.4-2.9 7.9-7 9.8-4.1-1.9-7-5.4-7-9.8V5.8z"/><path stroke-width="1.8" d="M9 12.2l2.1 2.1L15.2 10"/></symbol>
+  </svg>
 
-    <div class="card">
-      <h3>Contact us</h3>
-      <p>Email <a href="mailto:moodora.app@gmail.com?subject=Dozen%20support">moodora.app@gmail.com</a>. We usually reply within two business days. If something in a recipe or a price looks wrong, you can also report it right in the app.</p>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Dozen home"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>Dozen</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="support.html">Help</a>
+      </nav>
+      <span class="soon">Coming soon<span class="wide"> to the App Store</span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <span class="pill"><span class="mark sm" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>Weekly dinner planner for iPhone</span>
+          <h1>A week of dinners that fits <em>your budget.</em></h1>
+          <p class="lead">Dozen plans dinners for your household and builds one grocery list priced by the pack at your store. Dinners share the packs you buy, so less goes to waste.</p>
+          <div class="cta">
+            <span class="soon big">Coming soon<small>to the App Store for iPhone</small></span>
+            <a class="more" href="#how">See how it works <svg class="ic-svg" aria-hidden="true"><use href="#i-down"/></svg></a>
+          </div>
+          <ul class="ticks">
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>See your week before you subscribe</li>
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>No account or sign-in</li>
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>14-day free trial on the yearly plan</li>
+          </ul>
+        </div>
+
+        <div class="stage">
+          <div class="phone front"><img src="img/week.jpg" width="660" height="1434" alt="Dozen’s This week screen: groceries at Walmart estimated at $64.61, $35.39 under a $100 budget, with Greek pork bowls, smoky paprika chicken, black bean burritos and tuna pasta puttanesca."></div>
+          <div class="phone back"><img src="img/list.jpg" width="660" height="1434" alt="Dozen’s grocery list grouped by aisle, each item with its pack size, price and the dinners that use it."></div>
+          <div class="float budget" aria-hidden="true">
+            <div class="float-label">This week’s groceries (est.)</div>
+            <div class="float-big">$64.61</div>
+            <div class="bar"><span></span></div>
+            <span class="chip">$35.39 under budget</span>
+          </div>
+          <div class="float share" aria-hidden="true">
+            <span class="egg"><svg class="ic-svg"><use href="#i-egg"/></svg></span>
+            <div><strong>Shares the garlic with Sunday and Wednesday</strong><span>One head covers all 3 dinners.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="facts">
+      <div class="wrap">
+        <ul>
+          <li><strong>300</strong>dinners written for Dozen</li>
+          <li><strong>15</strong>grocery chains to pick from</li>
+          <li><strong>1 minute</strong>to plan your first week</li>
+          <li><strong>USDA</strong>nutrition per serving</li>
+        </ul>
+      </div>
     </div>
 
-    <h2>Common questions</h2>
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker">How it works</p>
+          <h2>Plan the week in about a minute</h2>
+          <p class="sub">Answer a few questions once, then plan a new week whenever you’re ready.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="num">1</span>
+            <h3>Tell Dozen about your week</h3>
+            <p>How many people you cook for, how many dinners you need, your weekly budget, your ZIP code and your store.</p>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <h3>See your dinners and the total</h3>
+            <p>Dinners with photos and cook times, and an estimated grocery total for your store. You see all of it before you subscribe.</p>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <h3>Shop one list</h3>
+            <p>Priced by the pack and grouped by aisle. Check items off as you shop, or add the list to Apple Reminders to shop together.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-    <h3>How are grocery prices estimated?</h3>
-    <p>We start from public average prices (U.S. Bureau of Labor Statistics and weekly USDA retail reports) and our own checks of pack sizes, then adjust for your region and store. Prices are estimates and can differ from your store’s shelf price. Dozen isn’t affiliated with any grocery store.</p>
+    <section class="section band" id="packs">
+      <div class="wrap split">
+        <div class="split-media">
+          <div class="phone"><img src="img/recipe.jpg" width="660" height="1434" loading="lazy" alt="A Dozen recipe for smoky paprika chicken with potatoes and green beans: 45 minutes, 4 servings, $2.20 a serving, with a note that it shares the garlic with Sunday and Wednesday."></div>
+        </div>
+        <div>
+          <p class="kicker">Priced by the pack</p>
+          <h2>Stores sell eggs by the dozen, not one at a time.</h2>
+          <p class="sub">A recipe needs half an onion; the store sells you a whole one. Dozen builds your list from real pack sizes and picks dinners that share them, so the rest of the spinach goes into Thursday’s pasta instead of the trash.</p>
+          <ul class="checks">
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>Every item on the list shows which dinners use it</li>
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>Each dinner shows what it shares with the rest of your week</li>
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>Whatever is left goes into next week’s plan first</li>
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>Prices are adjusted for your region and your store</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <h3>A price looks wrong. What can I do?</h3>
-    <p>On the grocery list, press and hold the item and tell us what you paid. We use these reports to correct prices for everyone.</p>
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker">Features</p>
+          <h2>Made for busy weeknights</h2>
+          <p class="sub">Everything you need to get from “what’s for dinner?” to dinner on the table.</p>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-swap"/></svg></span>
+            <h3>Swap any dinner</h3>
+            <p>Pick another dinner and your total updates right away, so you can see if the week still fits.</p>
+          </div>
+          <div class="feature">
+            <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <h3>Pin and save favorites</h3>
+            <p>Keep the dinners you want this week, and save favorites for later weeks.</p>
+          </div>
+          <div class="feature">
+            <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <h3>Leftovers come first</h3>
+            <p>Half a bag of rice from this week goes into next week’s plan first, so it gets used.</p>
+          </div>
+          <div class="feature">
+            <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-pantry"/></svg></span>
+            <h3>Your pantry stays off the list</h3>
+            <p>Tell Dozen what you always have at home, like oil and salt, and it won’t add them to your list.</p>
+          </div>
+          <div class="feature">
+            <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-timer"/></svg></span>
+            <h3>Cooking mode</h3>
+            <p>Large steps, one-tap timers, and the screen stays on while you cook.</p>
+          </div>
+          <div class="feature">
+            <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-bell"/></svg></span>
+            <h3>Reminders that help</h3>
+            <p>A dinner reminder, plus a heads-up the night before when something needs to thaw.</p>
+          </div>
+          <div class="feature">
+            <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <h3>For the way you eat</h3>
+            <p>Vegetarian, vegan, gluten-free, dairy-free, low-carb, high-protein and under-500-calorie dinners.</p>
+          </div>
+          <div class="feature">
+            <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-link"/></svg></span>
+            <h3>Save recipes from websites</h3>
+            <p>Paste a link to save a recipe, then add it to any night of your week.</p>
+          </div>
+          <div class="feature">
+            <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <h3>Shop together</h3>
+            <p>Add the list to Apple Reminders, or share it as text with whoever is doing the shopping.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h3>Something in a recipe is wrong.</h3>
-    <p>Open the recipe and tap “Something wrong in this recipe?” at the bottom. Tell us what’s off; a note is optional.</p>
+    <section class="section band" id="recipes">
+      <div class="wrap split flip">
+        <div class="split-media">
+          <div class="phone"><img src="img/cook.jpg" width="660" height="1434" loading="lazy" alt="Dozen’s cooking mode showing step 4 of 5 in large text, with the oven at 450°F and a button to start a 13-minute timer."></div>
+        </div>
+        <div>
+          <p class="kicker">Recipes you can count on</p>
+          <h2>300 dinners, checked before they reach you</h2>
+          <p class="sub">Every recipe was written ahead of time and checked against clear rules.</p>
+          <ul class="checks">
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>Every ingredient appears in the steps</li>
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>Meat, fish and eggs come with safe internal temperatures</li>
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>Times are spelled out, with one-tap timers</li>
+            <li><svg class="ic-svg" aria-hidden="true"><use href="#i-check"/></svg>Nutrition per serving, estimated from USDA FoodData Central</li>
+          </ul>
+          <p class="note">Spot a problem? Report it in one tap from the recipe.</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>How do I cancel my subscription?</h3>
-    <p>Subscriptions are billed by Apple. On your iPhone, open Settings, tap your name, then Subscriptions, and choose Dozen. Deleting the app doesn’t cancel a subscription. If you cancel during the free trial, you won’t be charged.</p>
+    <section class="section" id="privacy">
+      <div class="wrap">
+        <div class="green">
+          <p class="kicker">Privacy</p>
+          <h2>Your week stays yours</h2>
+          <p class="sub">Dozen is built so there’s nothing to sign up for and little to share.</p>
+          <div class="trio">
+            <div>
+              <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-lock"/></svg></span>
+              <h3>No account</h3>
+              <p>No sign-in, no email, no password. Open the app and plan.</p>
+            </div>
+            <div>
+              <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <h3>On your phone</h3>
+              <p>Your plan, list, pantry and favorites stay on your phone and in your own iCloud, not on our servers.</p>
+            </div>
+            <div>
+              <span class="ic"><svg class="ic-svg" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <h3>No ads</h3>
+              <p>We don’t show ads, sell your information or track you across other companies’ apps.</p>
+            </div>
+          </div>
+          <p class="note">Read the details in our <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>How do I restore a purchase on a new phone?</h3>
-    <p>Use the same Apple Account, open Dozen and tap Restore on the subscription screen. If iCloud is on, your plan, favorites and pantry come back too.</p>
+    <section class="section band" id="pricing">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker">Pricing</p>
+          <h2>See your week first, then decide</h2>
+          <p class="sub">Plan your first week and see the dinners and the total before you subscribe. Recipes, the grocery list, swaps and the pantry are part of Dozen Premium.</p>
+        </div>
+        <div class="plans">
+          <div class="plan best">
+            <span class="badge">Best value</span>
+            <h3>Yearly</h3>
+            <p class="price">$29.99 <span>/ year</span></p>
+            <p>14-day free trial, then $29.99 a year ($2.49 a month). We’ll remind you 2 days before your trial ends.</p>
+          </div>
+          <div class="plan">
+            <h3>Monthly</h3>
+            <p class="price">$9.99 <span>/ month</span></p>
+            <p>No free trial. Billed every month.</p>
+          </div>
+        </div>
+        <p class="fine">Prices in U.S. dollars. Payment is charged to your Apple Account. Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period. Manage or cancel anytime in Settings › your name › Subscriptions.</p>
+      </div>
+    </section>
 
-    <h3>Can Dozen handle food allergies?</h3>
-    <p>Diet settings and “foods you won’t eat” help choose recipes, but they aren’t an allergen check. Always read ingredient labels.</p>
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker">Questions</p>
+          <h2>Good to know</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>How are grocery prices estimated?</summary>
+            <p>We start from public average prices (U.S. Bureau of Labor Statistics and weekly USDA retail reports) and our own checks of pack sizes, then adjust for your region and store. Prices are estimates and can differ from your store’s shelf price. If one looks off, press and hold the item on your list and tell us what you paid.</p>
+          </details>
+          <details>
+            <summary>Which stores can I pick?</summary>
+            <p>Walmart, Aldi, Lidl, H-E-B, Target, Safeway, Meijer, Kroger, Publix, Stop &amp; Shop, Trader Joe’s, Albertsons, Whole Foods, Costco and BJ’s. If yours isn’t listed, pick Other store and Dozen uses average prices for your region. Dozen isn’t affiliated with any of these stores.</p>
+          </details>
+          <details>
+            <summary>Do I need an account?</summary>
+            <p>No. There’s no sign-in. Your subscription belongs to your Apple Account, and Restore brings it back on a new phone. If iCloud is on, your plan, favorites and pantry come back too.</p>
+          </details>
+          <details>
+            <summary>Can Dozen handle food allergies?</summary>
+            <p>Diet settings and foods you won’t eat help choose recipes, but they aren’t an allergen check. Always read ingredient labels.</p>
+          </details>
+          <details>
+            <summary>How do I cancel?</summary>
+            <p>Subscriptions are billed by Apple. On your iPhone, open Settings, tap your name, then Subscriptions, and choose Dozen. Deleting the app doesn’t cancel a subscription. If you cancel during the free trial, you won’t be charged.</p>
+          </details>
+        </div>
+        <p class="faq-more"><a href="support.html">More answers on the Help page</a></p>
+      </div>
+    </section>
 
-    <h3>How do I delete my data?</h3>
-    <p>Dozen has no accounts, and your plan isn’t stored on our servers. In the app, go to Profile and tap Erase all data. This deletes your plan, list, favorites, pantry and answers from your phone and from iCloud. If you use Dozen on another device, do the same there. Your subscription isn’t affected.</p>
-
-    <h2>Data sources</h2>
-    <ul>
-      <li>Nutrition: U.S. Department of Agriculture, Agricultural Research Service. FoodData Central. <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a></li>
-      <li>Prices: U.S. Bureau of Labor Statistics, Average Price Data; USDA Agricultural Marketing Service, retail feature activity reports; USDA Economic Research Service, Fruit and Vegetable Prices.</li>
-    </ul>
-    <p class="muted">Store names are trademarks of their owners and are used only to describe where you shop.</p>
+    <section class="final">
+      <div class="wrap">
+        <span class="mark lg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <h2>Plan this week’s dinners in about a minute</h2>
+        <p class="sub">Tell Dozen your budget and your store, and see the whole week before you subscribe.</p>
+        <span class="soon big">Coming soon<small>to the App Store for iPhone</small></span>
+      </div>
+    </section>
   </main>
-  <footer>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-    <span>© 2026 Dozen</span>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div>
+        <a class="brand" href="./"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>Dozen</a>
+        <p>Weekly dinners for your budget, with a grocery list priced by the pack.</p>
+      </div>
+      <nav aria-label="Site">
+        <a href="support.html">Help</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:moodora.app@gmail.com?subject=Dozen">Contact</a>
+      </nav>
+      <p class="legal">© 2026 Dozen. Store names are trademarks of their owners and are used only to describe where you shop. Dozen isn’t affiliated with any grocery store.</p>
+    </div>
   </footer>
 </body>
 </html>
