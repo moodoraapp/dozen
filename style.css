@@ -1,0 +1,105 @@
+:root {
+  --bg: #fbf8f2;
+  --surface: #ffffff;
+  --text: #1f1d1a;
+  --muted: #5f5a52;
+  --brand: #2e6b4e;
+  --brand-text: #1d4a35;
+  --line: #e7e1d6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171614;
+    --surface: #211f1c;
+    --text: #f2eee6;
+    --muted: #b5ada0;
+    --brand: #6fb38f;
+    --brand-text: #8fcaa9;
+    --line: #34302b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+header, main, footer {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 28px;
+}
+
+.mark {
+  display: grid;
+  grid-template-columns: repeat(3, 8px);
+  gap: 3px;
+  padding: 7px;
+  border-radius: 9px;
+  background: var(--brand);
+}
+
+.mark i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.mark i:nth-child(3) { background: #f2b544; }
+
+.name {
+  font: 600 22px/1 "Iowan Old Style", Georgia, serif;
+  color: var(--text);
+  text-decoration: none;
+}
+
+main { padding-top: 24px; padding-bottom: 48px; }
+
+h1, h2, h3 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  line-height: 1.25;
+}
+
+h1 { font-size: 34px; margin: 8px 0 4px; }
+h2 { font-size: 23px; margin: 36px 0 8px; }
+h3 { font-size: 18px; margin: 24px 0 4px; }
+
+p, li { color: var(--text); }
+.muted { color: var(--muted); }
+
+a { color: var(--brand-text); }
+
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 4px 18px;
+  margin: 16px 0;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  padding-bottom: 40px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+footer a { margin-right: 14px; }
